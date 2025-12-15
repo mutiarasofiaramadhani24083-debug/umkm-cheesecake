@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri - Sweet Cheese Cake</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="images/icon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    .foto-umkm {
+      height: 250px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    
+    .foto-umkm:hover {
+      transform: scale(1.03); 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="images/logo_produk.jpg" alt="Logo" width="35" height="35" class="rounded-circle me-2 border border-2 border-white">
+        Sweet Cheese Cake
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link active" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5 pt-4">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="color: #b1596f;">Galeri Dokumentasi</h2>
+      <p class="text-muted">Klik pada foto untuk melihat detail keterangan.</p>
+      <hr class="w-25 mx-auto" style="border: 3px solid #ff8fa3; opacity: 1;">
+    </div>
+
+    <div class="row g-4">
+        
+        <div class="col-md-4 col-sm-6">
+            <div class="card border-0 bg-transparent">
+                <img src="images/galeri1.jpg" class="card-img-top foto-umkm shadow-sm" alt="Proses Pembuatan Adonan yang Higienis">
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card border-0 bg-transparent">
+                <img src="images/galeri2.jpg" class="card-img-top foto-umkm shadow-sm" alt="Kemasan Premium Siap Kirim">
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card border-0 bg-transparent">
+                <img src="images/galeri3.jpg" class="card-img-top foto-umkm shadow-sm" alt="Varian Cheese Cake Full Loyang">
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card border-0 bg-transparent">
+                <img src="images/galeri4.jpg" class="card-img-top foto-umkm shadow-sm" alt="Stand Pameran UMKM Pekalongan">
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card border-0 bg-transparent">
+                <img src="images/galeri5.jpg" class="card-img-top foto-umkm shadow-sm" alt="Lokasi Produksi Rumahan">
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card border-0 bg-transparent">
+                <img src="images/galeri6.jpg" class="card-img-top foto-umkm shadow-sm" alt="Antusiasme Pelanggan di Bazar">
+            </div>
+        </div>
+
+    </div>
+  </main>
+
+  <div class="modal fade" id="modalLihatFoto" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content text-white" style="background-color: rgba(0,0,0,0.9); border: none;">
+        <div class="modal-header border-0">
+            <h5 class="modal-title text-white">Detail Foto</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+            <img src="" id="gambarJumbo" class="img-fluid rounded mb-3" alt="Preview">
+            
+            <h5 id="captionFoto" class="fw-light fst-italic text-warning"></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-pink text-white text-center py-4 mt-5" style="background-color: #b1596f;">
+    <p class="mb-0 fw-bold">&copy; 2025 Sweet Cheese Cake.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+        
+        $('.foto-umkm').click(function(){
+            
+            // 1. Ambil data dari elemen yang diklik
+            let source = $(this).attr('src');  
+            let ket    = $(this).attr('alt');
+
+            // 2. Masukkan data ke elemen di dalam Modal
+            $('#gambarJumbo').attr('src', source);
+            $('#captionFoto').text(ket); 
+
+            // 3. Tampilkan Modal
+            $('#modalLihatFoto').modal('show');
+        });
+
+    });
+  </script>
+</body>
+</html>

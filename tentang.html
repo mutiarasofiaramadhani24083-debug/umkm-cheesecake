@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang Kami - Sweet Cheese Cake</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="images/icon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="images/logo_produk.jpg" alt="Logo" width="35" height="35" class="rounded-circle me-2 border border-2 border-white">
+        Sweet Cheese Cake
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tentang.html">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="text-center text-white py-5 mb-5" style="background: linear-gradient(rgba(177, 89, 111, 0.8), rgba(255, 143, 163, 0.8)), url('images/galeri6.jpg'); background-size: cover; background-position: center;">
+    <div class="container py-5">
+      <h1 class="display-4 fw-bold mt-4">Perjalanan Rasa</h1>
+      <p class="lead mb-0">Dari dapur rumahan menjadi kebahagiaan ribuan pelanggan.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <img src="images/galeri5.jpg" class="img-fluid rounded-4 shadow-lg mb-4 mb-md-0" alt="Owner">
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold" style="color: #b1596f;">Siapa Kami?</h2>
+        <p class="text-muted">
+          Sweet Cheese Cake berdiri sejak tahun <strong>2025</strong>. Berawal dari hobi baking di akhir pekan, kini kami berkomitmen menghadirkan 
+          <strong>Cheese Cake Premium</strong> dengan harga mahasiswa.
+        </p>
+        <p>
+          Kami percaya bahwa kue yang enak tidak harus mahal. Dengan bahan impor pilihan dan teknik pemanggangan presisi, 
+          kami menciptakan tekstur yang <em>creamy</em> namun tetap ringan di lidah.
+        </p>
+      </div>
+    </div>
+
+    <div class="mb-5">
+        <div class="text-center mb-4">
+            <h3 class="fw-bold" style="color: #b1596f;">Nilai Utama Kami</h3>
+            <p class="text-muted">Alasan kenapa pelanggan selalu kembali.</p>
+        </div>
+        <div class="row g-4" id="values-container">
+            </div>
+    </div>
+
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8">
+            <h3 class="fw-bold text-center mb-4" style="color: #b1596f;">Proses Dapur Kami</h3>
+            <div class="accordion shadow-sm" id="accordionProses">
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            1. Pemilihan Bahan Baku
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionProses">
+                        <div class="accordion-body text-muted">
+                            Kami hanya menggunakan Cream Cheese fresh, telur omega, dan butter premium. Tanpa bahan pengawet buatan yang berbahaya.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            2. Teknik Mixing & Baking
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionProses">
+                        <div class="accordion-body text-muted">
+                            Adonan diaduk dengan kecepatan rendah untuk menjaga tekstur padat namun lembut. Dipanggang dengan metode <em>water bath</em> (Au Bain Marie) agar tidak retak.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            3. Quality Control (QC)
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionProses">
+                        <div class="accordion-body text-muted">
+                            Setiap loyang dicek kematangannya. Hanya produk dengan bentuk sempurna dan aroma khas yang akan dikemas untuk pelanggan.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-pink text-white text-center py-4" style="background-color: #b1596f;">
+    <div class="container">
+      <p class="mb-0 fw-bold">&copy; 2025 Sweet Cheese Cake.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const nilaiKami = [
+        {
+            icon: "fas fa-medal",
+            title: "Kualitas Premium",
+            desc: "Bahan impor standar restoran bintang lima."
+        },
+        {
+            icon: "fas fa-hand-holding-heart",
+            title: "Pelayanan Ramah",
+            desc: "Kepuasan pelanggan adalah prioritas utama kami."
+        },
+        {
+            icon: "fas fa-check-double",
+            title: "Higienis",
+            desc: "Dapur bersih dan prosedur sterilisasi alat rutin."
+        }
+    ];
+
+    $(document).ready(function(){
+        
+        // 1. RENDER VALUES (Logic Implementation)
+        const container = $('#values-container');
+        
+        nilaiKami.forEach((item, index) => {
+            let html = `
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4 value-card" style="transition:0.3s">
+                        <div class="mb-3">
+                            <i class="${item.icon} fa-3x" style="color: #ff8fa3;"></i>
+                        </div>
+                        <h5 class="fw-bold">${item.title}</h5>
+                        <p class="text-muted small">${item.desc}</p>
+                    </div>
+                </div>
+            `;
+            container.append(html);
+        });
+
+        // 2. JQUERY EFFECT: Hover Animation pada Card Value
+        $('.value-card').hover(
+            function() { $(this).css('transform', 'translateY(-10px)'); },
+            function() { $(this).css('transform', 'translateY(0)'); }
+        );
+
+
+    });
+  </script>
+</body>
+</html>

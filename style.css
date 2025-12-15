@@ -1,0 +1,55 @@
+:root {
+    --primary: #ff8fa3; 
+    --secondary: #b1596f; 
+    --bg-light: #fff0f3;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: #4a1c1c;
+}
+
+.navbar-custom {
+    background: rgba(255, 143, 163, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card-product {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card-product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 143, 163, 0.4);
+}
+
+.card-product img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(255, 143, 163, 0.25);
+}
+
+.btn-custom {
+    background-color: var(--secondary);
+    color: white;
+    border-radius: 50px;
+    padding: 8px 25px;
+    transition: 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: var(--primary);
+    transform: scale(1.05);
+}
